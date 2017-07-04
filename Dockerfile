@@ -11,7 +11,7 @@ MAINTAINER Baptiste Assmann <bedis9@gmail.com>
 
 ARG ETHERPAD_VER=
 
-ENV DEL_PKGS="openssl curl" RM_DIRS="/usr/src/* /var/cache/apk/*" PAD_BUILD_DEPENDENCY="openssl openssl-dev pcre pcre-dev zlib zlib-dev"
+ENV DEL_PKGS="openssl" RM_DIRS="/usr/src/* /var/cache/apk/*" PAD_BUILD_DEPENDENCY="openssl openssl-dev pcre pcre-dev zlib zlib-dev"
 
 COPY ./installer/ /usr/src/
 
