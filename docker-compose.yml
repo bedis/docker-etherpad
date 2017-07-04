@@ -1,0 +1,15 @@
+version: "3"
+services:
+  haproxy:
+    image: etherpad:latest
+    container_name: etherpad
+    restart: always
+    network_mode: "bridge"
+    volumes:
+      - ./data/settings.json:/opt/etherpad/settings.json
+      - ./data/node_modules:/opt/etherpad/node_modules
+      - ./data/var:/opt/etherpad/var
+    build:
+      context: .
+      args:
+        ETHERPAD_VER: 1.6.1
